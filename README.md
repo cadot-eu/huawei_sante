@@ -8,4 +8,4 @@ Example of screen copy
 
 After detection
 
-![After detection](redult.png)
+![After detection](result.png)
