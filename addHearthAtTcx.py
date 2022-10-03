@@ -63,15 +63,16 @@ facteur = resamp/vraiamp
 corr = []
 for pt in result:
     corr.append(int((pt-min)/facteur)+basemin)
-
+print(list_of_files=glob.glob(
+    '/storage/emulated/0/Download/Tracks/Export/*.tcx'))
 if os.path.exists("course.tcx") == True:
     xdom = xml.dom.minidom.parse("course.tcx")
 elif os.path.exists("/storage/emulated/0/Download/Tracks/Export") == True:
     list_of_files = glob.glob(
-        '/storage/emulated/0/Download/Tracks/Export/*')
+        '/storage/emulated/0/Download/Tracks/Export/*.tcx')
     xdom = xml.dom.minidom.parse(max(list_of_files, key=os.path.getmtime))
 else:
-    print("pas d'image")
+    print("pas de tcx")
     quit()
 xdom = xml.dom.minidom.parse("course.tcx")
 xdoc = xdom.documentElement
