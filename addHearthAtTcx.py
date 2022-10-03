@@ -68,7 +68,7 @@ if os.path.exists("course.tcx") == True:
     xdom = xml.dom.minidom.parse("course.tcx")
 elif os.path.exists("/storage/emulated/0/Download/Tracks/Export") == True:
     list_of_files = glob.glob(
-        '/storage/emulated/0/Download/Tracks/Export/*.tcx')
+        '/storage/emulated/0/Download/Tracks/Export/*')
     xdom = xml.dom.minidom.parse(max(list_of_files, key=os.path.getmtime))
 else:
     print("pas d'image")
