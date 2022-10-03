@@ -63,7 +63,7 @@ facteur = resamp/vraiamp
 corr = []
 for pt in result:
     corr.append(int((pt-min)/facteur)+basemin)
-print(list_of_files=glob.glob(
+print(glob.glob(
     '/storage/emulated/0/Download/Tracks/Export/*.tcx'))
 if os.path.exists("course.tcx") == True:
     xdom = xml.dom.minidom.parse("course.tcx")
