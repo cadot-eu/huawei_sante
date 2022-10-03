@@ -7,6 +7,7 @@ import glob
 from PIL import Image
 list_of_files = glob.glob('/storage/emulated/0/Pictures/Screenshots/*')
 print(max(list_of_files, key=os.path.getmtime))
+quit()
 # on prend le fichier image.png ou le dernier fichier image enregistré dans /sdcard/Pictures/Screenshots
 if os.path.exists("image.png") == True:
     im = Image.open('image.png')
