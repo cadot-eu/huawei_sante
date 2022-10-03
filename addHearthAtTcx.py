@@ -76,7 +76,6 @@ elif os.path.exists("/storage/emulated/0/Download/Tracks/Export") == True:
 else:
     print("pas de tcx")
     quit()
-xdom = xml.dom.minidom.parse("course.tcx")
 xdoc = xdom.documentElement
 xdoc.setAttribute("xmlns:ns5",
                   "http://www.garmin.com/xmlschemas/ActivityGoals/v1")
