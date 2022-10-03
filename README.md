@@ -47,3 +47,13 @@ After detection
 - pip install pillow
 - pip install glob2
 ```
+### Cheat
+
+You can make a shortcut by termux widget.
+Create a file in .shortcuts/addTcxToHearth
+```bash
+cd huawei_sante
+python addHearthAtTcx.py
+mv nouveau.tcx /storage/emulated/0/Download/. #final exportation of tcx result
+exit
+```
