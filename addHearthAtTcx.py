@@ -2,10 +2,23 @@
 import numpy as np
 import xml.dom.minidom
 import xml.etree.ElementTree as ET
+import os
+import glob
 from PIL import Image
+
+# on prend le fichier image.png ou le dernier fichier image enregistré dans /sdcard/Pictures/Screenshots
+if os.path.exists("image.png") == True:
+    im = Image.open('image.png')
+elif os.path.exists("/sdcard/Pictures/Screenshots") == True:
+    list_of_files = glob.glob('/sdcard/Pictures/Screenshots/*.png')
+    im = Image.open(max(list_of_files, key=os.path.getmtime))
+else:
+    print("pas d'image")
+    quit()
+
 basemin = int(input('min bpm ? '))
 basemax = int(input('max bpm ? '))
-im = Image.open('image.png')
+
 # coupe image
 graf = im.crop((110, 326, 2234, 866))
 # graf.save('crop.png')

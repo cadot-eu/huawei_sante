@@ -15,9 +15,9 @@ The curve given by the copy is larger than the stroke.
 There is therefore an interpolation to have the missing points.
 This is not a problem because watches have a measurement delay and their measurements have a fairly large share of approximation.
 
-The tcx files is ued for a importation in trainingpeaks. The tcx file is not complete because Trainigpeaks calculate the datas empty ;-)
+The tcx files is ued for a importation in trainingpeaks. The tcx file is not complete because Trainingpeaks calculate the datas empty ;-)
 
-> a good geek is a lazy geek 
+> a good geek is a lazy geek
 
 ## Aplications
 
@@ -34,6 +34,8 @@ After detection
 ![After detection](result.png)
 
 ## Android install
+
+```bash
 - use Termux
 - pkg install root-repo
 - pkg update
@@ -44,4 +46,4 @@ After detection
 - apt install python-numpy
 - pkg install n libjpeg-turbo libcrypt ndk-sysroot clang zlib
 - pip install pillow
-
+```
