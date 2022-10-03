@@ -15,8 +15,8 @@ else:
     print("pas d'image")
     quit()
 
-basemin = int(input('min bpm ? ') or "74")
-basemax = int(input('max bpm ? ') or "162")
+basemin = int(input('min bpm [74]?: ') or "74")
+basemax = int(input('max bpm [162]?: ') or "162")
 
 # coupe image
 graf = im.crop((110, 326, 2234, 866))
@@ -68,7 +68,7 @@ if os.path.exists("course.tcx") == True:
     xdom = xml.dom.minidom.parse("course.tcx")
 elif os.path.exists("/storage/emulated/0/Download/Tracks/Export") == True:
     list_of_files = glob.glob(
-        '/storage/emulated/0/Download/Tracks/Export/*tcx')
+        '/storage/emulated/0/Download/Tracks/Export/*.tcx')
     xdom = xml.dom.minidom.parse(max(list_of_files, key=os.path.getmtime))
 else:
     print("pas d'image")
