@@ -10,7 +10,8 @@ if os.path.exists("image.png") == True:
     im = Image.open('image.png')
 elif os.path.exists("/storage/emulated/0/Pictures/Screenshots") == True:
     list_of_files = glob.glob('/storage/emulated/0/Pictures/Screenshots/*.png')
-    im = Image.open(max(list_of_files, key=os.path.getmtime))
+    im = Image.open(
+        list_of_files[len(sorted(list_of_files, key=os.path.getmtime))-1])
 else:
     print("pas d'image")
     quit()
@@ -63,15 +64,15 @@ facteur = resamp/vraiamp
 corr = []
 for pt in result:
     corr.append(int((pt-min)/facteur)+basemin)
-print(glob.glob(
-    '/storage/emulated/0/Download/Tracks/Export/*.tcx'))
-print(max(list_of_files, key=os.path.getmtime))
+list_of_files = glob.glob(
+    '*.mp4')
 if os.path.exists("course.tcx") == True:
     xdom = xml.dom.minidom.parse("course.tcx")
 elif os.path.exists("/storage/emulated/0/Download/Tracks/Export") == True:
     list_of_files = glob.glob(
         '/storage/emulated/0/Download/Tracks/Export/*.tcx')
-    xdom = xml.dom.minidom.parse(max(list_of_files, key=os.path.getmtime))
+    xdom = xml.dom.minidom.parse(
+        list_of_files[len(sorted(list_of_files, key=os.path.getmtime))-1])
 else:
     print("pas de tcx")
     quit()
