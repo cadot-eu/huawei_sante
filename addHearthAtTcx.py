@@ -65,7 +65,7 @@ for pt in result:
     corr.append(int((pt-min)/facteur)+basemin)
 print(glob.glob(
     '/storage/emulated/0/Download/Tracks/Export/*.tcx'))
-print(xml.dom.minidom.parse(max(list_of_files, key=os.path.getmtime)))
+print(max(list_of_files, key=os.path.getmtime))
 if os.path.exists("course.tcx") == True:
     xdom = xml.dom.minidom.parse("course.tcx")
 elif os.path.exists("/storage/emulated/0/Download/Tracks/Export") == True:
