@@ -3,6 +3,8 @@ import numpy as np
 import xml.dom.minidom
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
+import os
+import glob
 from PIL import Image
 basemin = int(input('min bpm [74]? :') or "74")
 basemax = int(input('max bpm ? [160]? :') or "160")
@@ -16,7 +18,14 @@ duree = (input('durée de la course en heure:mn [1:00]? :') or '1:00')+':00'
 dateI = datetime.strptime(date, "%Y-%m-%d").date()
 dureeI = datetime.strptime(duree, "%H:%M:%S").time()
 id = date+'T'+debut+'Z'
-im = Image.open('image.png')
+if os.path.exists("image.png") == True:
+    im = Image.open('image.png')
+elif os.path.exists("/storage/emulated/0/Pictures/Screenshots") == True:
+    list_of_files = glob.glob('/storage/emulated/0/Pictures/Screenshots/*.png')
+    im = Image.open(max(list_of_files, key=os.path.getmtime))
+else:
+    print("pas d'image")
+    quit()
 # coupe image
 graf = im.crop((110, 326, 2234, 866))
 # graf.save('crop.png')

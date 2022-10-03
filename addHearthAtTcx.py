@@ -15,12 +15,12 @@ else:
     print("pas d'image")
     quit()
 
-basemin = int(input('min bpm ? '))
-basemax = int(input('max bpm ? '))
+basemin = int(input('min bpm ? ') or "74")
+basemax = int(input('max bpm ? ') or "162")
 
 # coupe image
 graf = im.crop((110, 326, 2234, 866))
-# graf.save('crop.png')
+graf.save('crop.png')
 # boucle sur la largeur de l'image
 result = []
 for x in range(graf.size[0]):
@@ -30,7 +30,7 @@ for x in range(graf.size[0]):
         # récupère la couleur du pixel
         cpixel = graf.load()[x, y]
         # compare color of pixel
-        if cpixel == (232, 70, 92):
+        if cpixel == (232, 70, 93):
             valy = int(graf.size[1]-y)
             result.append(valy)
             trouve = 1

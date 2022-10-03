@@ -22,8 +22,8 @@ The tcx files is ued for a importation in trainingpeaks. The tcx file is not com
 ## Aplications
 
 You have two littles scripts:
-. createTCXFromGraph.py for create a tcx from copy of screen for importation in peak
-. addHearthAtTcx.py for modify a tcx exported by Huawei Health and add heart data recognized from copy screen
+. createTCXFromGraph.py for create a tcx from copy of screen for importation in peak ()
+. addHearthAtTcx.py for modify a tcx exported by Huawei Health and add heart data recognized from copy screen (use course.tcx and image.png of last file in /storage/emulated/0/Download/Tracks/Export for tcx and /storage/emulated/0/Pictures/Screenshots for png)
 
 ## Example of screen copy
 
