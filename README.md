@@ -39,11 +39,11 @@ After detection
 - use Termux
 - pkg install root-repo
 - pkg update
-- pkg install python3
 - apt install git
 - git clone https://github.com/cadot-eu/huawei_sante
 - cd huawei_sante
 - apt install python-numpy
-- pkg install n libjpeg-turbo libcrypt ndk-sysroot clang zlib
+- pkg install libjpeg-turbo libcrypt ndk-sysroot clang zlib
 - pip install pillow
+- pip install glob2
 ```

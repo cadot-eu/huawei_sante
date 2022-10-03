@@ -9,8 +9,8 @@ from PIL import Image
 # on prend le fichier image.png ou le dernier fichier image enregistré dans /sdcard/Pictures/Screenshots
 if os.path.exists("image.png") == True:
     im = Image.open('image.png')
-elif os.path.exists("/sdcard/Pictures/Screenshots") == True:
-    list_of_files = glob.glob('/sdcard/Pictures/Screenshots/*.png')
+elif os.path.exists("/storage/emulated/0/Pictures/Screenshots") == True:
+    list_of_files = glob.glob('/storage/emulated/0/Pictures/Screenshots/*.png')
     im = Image.open(max(list_of_files, key=os.path.getmtime))
 else:
     print("pas d'image")
